@@ -1,4 +1,5 @@
 class Movie < ActiveRecord::Base
  #insert has_many/belongs_to associations here
-    has_many :actors
+    belongs_to :actor
+    belongs_to :genre
 end 
