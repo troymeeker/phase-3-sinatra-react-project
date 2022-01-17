@@ -6,6 +6,7 @@ class CreateMovies < ActiveRecord::Migration[6.1]
       t.integer :release_date
       t.integer :actor_id
       t.integer :genre_id
+      
     end
   end
 end
