@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2022_01_17_200638) do
   create_table "actors", force: :cascade do |t|
     t.string "name"
     t.integer "age"
-    t.integer "movie_id"
   end
 
   create_table "genres", force: :cascade do |t|
@@ -32,7 +31,6 @@ ActiveRecord::Schema.define(version: 2022_01_17_200638) do
     t.string "name"
     t.string "rating"
     t.integer "release_date"
-    t.integer "actor_id"
     t.integer "genre_id"
   end
 

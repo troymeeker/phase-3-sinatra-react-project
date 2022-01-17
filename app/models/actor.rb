@@ -4,7 +4,7 @@ class Actor < ActiveRecord::Base
     has_many :movies, through: :movie_actors
 
     has_many :genres, through: :movie_actors
-    belongs_to :movie
+    
    
    
 
