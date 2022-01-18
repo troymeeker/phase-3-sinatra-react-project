@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2022_01_17_200638) do
     t.string "rating"
     t.integer "release_date"
     t.integer "genre_id"
+    t.integer "actor_ids"
   end
 
 end
