@@ -4,8 +4,7 @@ class CreateMovies < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :rating
       t.integer :release_date
-      t.integer :genre_id
-      t.integer :actor_id
+     
     end
   end
 end
