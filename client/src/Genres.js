@@ -1,20 +1,23 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import GenreCard from './GenreCard';
 
-const Genres = () => {
 
-  // fetch from /genres
-  useEffect(()=>{
-    fetch('http://localhost:9292/genres')
-    .then(resp => resp.json())
-    .then(data => console.log(data))
-  },[])
+const Genres = ({genres}) => {
+ 
+  const genreCards = genres.map((genre) => {
+   return <GenreCard genre={genre} key={genre.id}/>
+  })
   
+
   return (
     <div >
       <h1 className='navbar-item'> Genres Component</h1>
-      <h4>Render __ here</h4>
+     <ul>
+      {genreCards}
+     </ul>
+     <form>Create new Genre Form</form>
     </div>
   );
 }
 
-export default Genres;
+export default Genres; 

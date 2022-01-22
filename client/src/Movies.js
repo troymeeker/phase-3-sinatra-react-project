@@ -1,15 +1,21 @@
 import React from 'react';
+import MovieCard from './MovieCard';
 
 
-const Movies = () => {
-    
-  // fetch from /movies
+const Movies = ({movies}) => {
+ 
+  const movieCards = movies.map((movie) => {
+   return <MovieCard movie={movie} key={movie.id}/>
+  })
+  
 
   return (
     <div >
       <h1 className='navbar-item'> Movies Component</h1>
-      <h4>Render __ here</h4>
-       
+     <ul>
+      {movieCards}
+     </ul>
+     <form>Create new Movie Form</form>
     </div>
   );
 }

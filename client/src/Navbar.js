@@ -4,13 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
-    // const [movies, setMovies] = useState([])
-
-    // useEffect(() => {
-    //     fetch('http://localhost:9292/movies')
-    //     .then(resp => resp.json())
-    //     .then((movies) => setMovies(movies))
-    // }, [])
+  
 
   return (
     <div >

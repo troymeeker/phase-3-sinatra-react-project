@@ -1,19 +1,19 @@
 class ApplicationController < Sinatra::Base
     set :default_content_type, 'application/json'
     
-    get "/movies" do
-      movie = Movie.all
-      movie.to_json
+    get '/movies' do
+      movies = Movie.all
+      movies.to_json
     end
   
     get "/actors" do
-      actor = Actor.all
-      actor.to_json
+      actors = Actor.all
+      actors.to_json
     end
   
     get "/genres" do
-      genre = Genre.all
-      genre.to_json
+      genres = Genre.all
+      genres.to_json
     end
   
     get "/movies/:id" do 
@@ -35,7 +35,7 @@ class ApplicationController < Sinatra::Base
         
       )
       actor.to_json
-      #add react fetch, method: POST, content-type: application/json and body: JSON.stringify( name: "Jim Carrey", age: 60) 
+      
     end
   
   
