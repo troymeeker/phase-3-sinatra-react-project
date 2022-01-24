@@ -12,10 +12,11 @@ const Genres = ({genres}) => {
   return (
     <div >
       <h1 className='navbar-item'> Genres Component</h1>
-     <ul>
+     
+      <ul>
       {genreCards}
      </ul>
-     <form>Create new Genre Form</form>
+    
     </div>
   );
 }

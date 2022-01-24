@@ -3,8 +3,10 @@ import React from "react";
 const GenreCard = ({genre}) => {
 
     return (
-        <li>{genre.name}</li>
-        
+        <div>
+          <li>{genre.name}</li>
+         
+        </div>
     )
 }
 

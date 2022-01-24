@@ -33,6 +33,23 @@ const App = () => {
       .then(resp => resp.json())
       .then(data => setGenres(data))
   }, [])
+
+  function handleSubmit(actor){ 
+    fetch('http://localhost:9292/actors', {
+        method: "POST", 
+        headers: {
+           "Content-Type": "application/json"
+        },
+        body: JSON.stringify(actor)
+    })
+    .then((resp) => resp.json())
+    .then((actor) => {
+         setActors([...actors, actor])
+        // console.log('actors!');
+        
+
+    })
+  } 
   
 
   return (
@@ -45,7 +62,7 @@ const App = () => {
 
         <Route path="/movies" element={<Movies movies={movies}/>}/>
 
-        <Route path="/actors" element={<Actors actors={actors}/> }/>
+        <Route path="/actors" element={<Actors actors={actors} handleSubmit={handleSubmit}/> }/>
 
       </Routes>
    </BrowserRouter>

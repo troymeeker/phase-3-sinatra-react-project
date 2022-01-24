@@ -10,12 +10,14 @@ const Movies = ({movies}) => {
   
 
   return (
-    <div >
-      <h1 className='navbar-item'> Movies Component</h1>
-     <ul>
-      {movieCards}
-     </ul>
-     <form>Create new Movie Form</form>
+    <div>
+      <h1  className='navbar-item'> Movies Component</h1>
+
+      <button>Add Movie</button> 
+
+      <ul>{movieCards}</ul>
+     
+  
     </div>
   );
 }

@@ -14,10 +14,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.navbar{
 
-}
 .navbar-item{
- 
+  margin: 5px;
+  padding: 5px;
 
 }
