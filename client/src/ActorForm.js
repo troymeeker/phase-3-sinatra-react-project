@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-const ActorForm = ({handleSubmit}) => {
+const ActorForm = ({handleActorSubmit}) => {
     const [name, setName] = useState("")
     const [age, setAge] = useState("")
 
@@ -14,19 +14,16 @@ const ActorForm = ({handleSubmit}) => {
             age: age,
         };
 
-        handleSubmit(actor)
+        handleActorSubmit(actor)
         setName('')
         setAge('')
 
     }
     function handleNameChange(e){
-        
          setName(e.target.value)
     }
     function handleAgeChange(e){
-        
          setAge(e.target.value)
-
     }
 
     return (
@@ -49,8 +46,3 @@ const ActorForm = ({handleSubmit}) => {
 }
 
 export default ActorForm;
-
-
-
-
-

@@ -16,16 +16,30 @@ class ApplicationController < Sinatra::Base
       genres.to_json
     end
   
-    get "/movies/:id" do 
-      movie = Movie.find(params[:id])
+    # get "/movies/:id" do 
+    #   movie = Movie.find(params[:id])
   
-      movie.to_json
-    end
+    #   movie.to_json
+    # end
   
-    get "/actors/:id" do 
+    # get "/actors/:id" do 
+    #   actor = Actor.find(params[:id])
+  
+    #   actor.to_json
+    # end
+
+    delete '/actors/:id' do 
       actor = Actor.find(params[:id])
-  
+      actor.destroy
       actor.to_json
+
+    end
+    
+    delete '/movies/:id' do 
+      movie = Movie.find(params[:id])
+      movie.destroy
+      movie.to_json
+
     end
   
     post '/actors' do
@@ -37,14 +51,25 @@ class ApplicationController < Sinatra::Base
       actor.to_json
       
     end
-  
-  
-    patch '/actors/:id' do 
-      actor = Actor.find(params[:id])
-      actor.update(
-        name: params[:name], 
-        age: params[:age]
+
+    post '/movies' do
+      movie = Movie.create(
+        name: params[:name],
+        rating: params[:rating], 
+        release_date: params[:release_date]
+        
       )
-      actor.to_json
+      movie.to_json
+      
     end
+  
+  
+    # patch '/actors/:id' do 
+    #   actor = Actor.find(params[:id])
+    #   actor.update(
+    #     name: params[:name], 
+    #     age: params[:age]
+    #   )
+    #   actor.to_json
+    # end
 end

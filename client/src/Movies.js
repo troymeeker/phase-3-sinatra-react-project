@@ -1,11 +1,12 @@
 import React from 'react';
 import MovieCard from './MovieCard';
+import MovieForm from './MovieForm';
 
 
-const Movies = ({movies}) => {
+const Movies = ({movies, handleMovieSubmit, onMovieDelete}) => {
  
   const movieCards = movies.map((movie) => {
-   return <MovieCard movie={movie} key={movie.id}/>
+   return <MovieCard movie={movie} key={movie.id} onMovieDelete={onMovieDelete}/>
   })
   
 
@@ -13,7 +14,8 @@ const Movies = ({movies}) => {
     <div>
       <h1  className='navbar-item'> Movies Component</h1>
 
-      <button>Add Movie</button> 
+     
+      <MovieForm handleMovieSubmit={handleMovieSubmit}/>
 
       <ul>{movieCards}</ul>
      

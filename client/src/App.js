@@ -12,9 +12,9 @@ import Home from './Home';
 
 
 const App = () => {
-  const [movies, setMovies] = useState([])
-  const [actors, setActors] = useState([])
-  const [genres, setGenres] = useState([])
+  const [movies, setMovies] = useState([]);
+  const [actors, setActors] = useState([]);
+  const [genres, setGenres] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:9292/movies')
@@ -34,7 +34,7 @@ const App = () => {
       .then(data => setGenres(data))
   }, [])
 
-  function handleSubmit(actor){ 
+  function handleActorSubmit(actor){ 
     fetch('http://localhost:9292/actors', {
         method: "POST", 
         headers: {
@@ -47,9 +47,35 @@ const App = () => {
          setActors([...actors, actor])
         // console.log('actors!');
         
-
     })
   } 
+
+  function handleMovieSubmit(movie){
+    fetch('http://localhost:9292/movies', {
+        method: "POST", 
+        headers: {
+           "Content-Type": "application/json"
+        },
+        body: JSON.stringify(movie)
+    })
+    .then((resp) => resp.json())
+    .then((movie) => {
+         setMovies([...movies, movie])
+        
+        
+    })
+
+  }
+
+  function handleActorDelete(id){
+    const updatedActors = actors.filter((actor) => actor.id !== id)
+    setActors(updatedActors);
+  } 
+   
+  function handleMovieDelete(id){
+    const updatedMovies = movies.filter((movie) => movie.id !== id)
+    setMovies(updatedMovies);
+  }
   
 
   return (
@@ -60,9 +86,9 @@ const App = () => {
 
         <Route path="/genres" element={<Genres genres={genres}/>} />
 
-        <Route path="/movies" element={<Movies movies={movies}/>}/>
+        <Route path="/movies" element={<Movies movies={movies} handleMovieSubmit={handleMovieSubmit} onMovieDelete={handleMovieDelete}/>}/>
 
-        <Route path="/actors" element={<Actors actors={actors} handleSubmit={handleSubmit}/> }/>
+        <Route path="/actors" element={<Actors actors={actors} handleActorSubmit={handleActorSubmit} onActorDelete={handleActorDelete}/> }/>
 
       </Routes>
    </BrowserRouter>
