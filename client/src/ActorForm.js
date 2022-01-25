@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 
-
 const ActorForm = ({handleActorSubmit}) => {
     const [name, setName] = useState("")
     const [age, setAge] = useState("")

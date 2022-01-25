@@ -5,7 +5,7 @@ import GenreCard from './GenreCard';
 const Genres = ({genres}) => {
  
   const genreCards = genres.map((genre) => {
-   return <GenreCard genre={genre} key={genre.id}/>
+   return <GenreCard genre={genre} key={genre.id} />
   })
   
 

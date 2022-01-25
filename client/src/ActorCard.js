@@ -14,7 +14,7 @@ const ActorCard = ({actor, onActorDelete}) => {
         <div>
             <h4> |  {name}  | </h4>
             <h4> Age: {age}  </h4>
-      
+
             <button onClick={handleDelete}>Delete This Actor</button>
         </div>
     )

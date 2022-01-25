@@ -4,7 +4,6 @@ import ActorForm from './ActorForm';
 
 const Actors = ({actors, handleActorSubmit, onActorDelete}) => {
   
- 
     const actorCards = actors.map((actor) => {
      return <ActorCard actor={actor} key={actor.id} onActorDelete={onActorDelete}/>
     })
@@ -18,9 +17,6 @@ const Actors = ({actors, handleActorSubmit, onActorDelete}) => {
        <ul>
         {actorCards }
        </ul>
-       
-       
-       
          
       </div>
     )

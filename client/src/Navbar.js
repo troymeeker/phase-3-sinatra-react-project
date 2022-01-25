@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-
 const Navbar = () => {
   
-
   return (
     <div >
       <nav className='navbar'>
@@ -16,9 +13,7 @@ const Navbar = () => {
          <li><Link to='/actors'>Actors</Link></li>
           
         </ul>
-        
-      </nav>
-        
+      </nav>  
     </div>
   );
 }
