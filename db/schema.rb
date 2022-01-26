@@ -25,8 +25,6 @@ ActiveRecord::Schema.define(version: 2022_01_21_212051) do
     t.string "name"
     t.string "rating"
     t.integer "release_date"
-    t.integer "genre_id"
-    t.integer "actor_id"
   end
 
   create_table "roles", force: :cascade do |t|
