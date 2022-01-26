@@ -62,8 +62,8 @@ class ApplicationController < Sinatra::Base
       movie = Movie.create(
         name: params[:name],
         rating: params[:rating], 
-        release_date: params[:release_date]
-        
+        release_date: params[:release_date],
+        genre_id: params[:genre_id]
       )
       movie.to_json
     end
