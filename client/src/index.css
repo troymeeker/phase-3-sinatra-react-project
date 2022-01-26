@@ -8,6 +8,7 @@ body {
   background-color: rgb(189, 184, 184);
   margin: 5px;
   padding: 5px;
+  
 }
 
 code {
@@ -19,4 +20,23 @@ code {
   margin: 5px;
   padding: 5px;
 
+}
+.border{
+  border: solid black 2px;
+}
+.form-border{
+  border: solid rgb(78, 78, 128) 4px;
+  margin: 5px;
+  padding: 5px;
+  
+
+}
+.genres{
+  text-align: center;
+  
+  
+  
+}
+.centered{
+  text-align: center;
 }

@@ -13,7 +13,7 @@ const GenreCard = ({genre}) => {
 
     return (
         <div>
-          <li>{name}</li>
+          <h4 > - {name} - </h4>
          {/* <button onClick={handleDelete}>Delete</button> */}
         </div>
     )

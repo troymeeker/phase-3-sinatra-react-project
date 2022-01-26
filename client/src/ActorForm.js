@@ -28,7 +28,8 @@ const ActorForm = ({handleActorSubmit}) => {
     return (
      
      <div>
-       <form onSubmit={handleAddActor}>
+       <form onSubmit={handleAddActor} className='form-border'>
+         <h3>Add Actor </h3>
          <div>
             <label>Actor Name:</label>
             <input type='text' placeholder='Name' onChange={handleNameChange} value={name}/>

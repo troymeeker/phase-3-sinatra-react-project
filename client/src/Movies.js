@@ -11,8 +11,8 @@ const Movies = ({movies, handleMovieSubmit, onMovieDelete}) => {
   
 
   return (
-    <div>
-      <h1  className='navbar-item'> Movies Component</h1>
+    <div className='centered'>
+      <h1  className='border'> Movies </h1>
 
      
       <MovieForm handleMovieSubmit={handleMovieSubmit}/>

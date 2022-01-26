@@ -35,7 +35,8 @@ const MovieForm = ({handleMovieSubmit}) => {
 
     return (
         <div>
-        <form onSubmit={handleAddMovie}>
+        <form onSubmit={handleAddMovie} className='form-border'>
+        <h3>Add Movie </h3>
           <div>
              <label>Movie Name:</label>
              <input type='text' placeholder='Name' onChange={handleMovieNameChange} value={name}/>

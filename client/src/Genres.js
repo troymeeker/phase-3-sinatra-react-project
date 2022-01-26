@@ -10,8 +10,8 @@ const Genres = ({genres}) => {
   
 
   return (
-    <div >
-      <h1 className='navbar-item'> Genres Component</h1>
+    <div  className='centered , genres'>
+      <h1 className='border'> Genres </h1>
      
       <ul>
       {genreCards}

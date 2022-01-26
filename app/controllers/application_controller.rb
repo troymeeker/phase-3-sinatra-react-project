@@ -56,7 +56,6 @@ class ApplicationController < Sinatra::Base
         
       )
       actor.to_json
-      
     end
 
     post '/movies' do
@@ -67,7 +66,6 @@ class ApplicationController < Sinatra::Base
         
       )
       movie.to_json
-      
     end
   
   

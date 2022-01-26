@@ -9,8 +9,8 @@ const Actors = ({actors, handleActorSubmit, onActorDelete}) => {
     })
   
     return (
-      <div >
-        <h1 className='navbar-item'> Actors Component</h1>
+      <div className='centered'>
+        <h1 className='border'> Actors </h1>
        
       <ActorForm handleActorSubmit={handleActorSubmit}/>
 
