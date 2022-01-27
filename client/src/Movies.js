@@ -14,8 +14,7 @@ const Movies = ({movies, handleMovieSubmit, onMovieDelete }) => {
     <div className='centered'>
       <h1  className='border'> Movies </h1>
 
-     
-      <MovieForm handleMovieSubmit={handleMovieSubmit} />
+     <MovieForm handleMovieSubmit={handleMovieSubmit} />
 
       <ul>{movieCards}</ul>
   

@@ -1,7 +1,7 @@
 import React from "react";
 
 const GenreCard = ({genre}) => {
-  const {name} = genre
+  const {name} = genre;
 
     // function handleDelete(){
     //   fetch(`http://localhost:9292/genres/${id}`, {

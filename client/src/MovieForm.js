@@ -39,9 +39,10 @@ const MovieForm = ({handleMovieSubmit}) => {
         setReleaseDate(e.target.value)
     }
     function handleGenreChange(e){
-         setGenreId(e.target.value)
+         setGenreId(e.target.value);
         //  console.log(e.target.value);
     }
+    
 
     return (
         <div>
@@ -61,7 +62,7 @@ const MovieForm = ({handleMovieSubmit}) => {
           </div>
           <div> 
               <label>Select Genre: </label>
-              <select onChange={handleGenreChange} >
+              <select  onChange={handleGenreChange}>
                   <option value='0'>Select</option>
                   <option value='1'>Action</option>
                   <option value='2'>Drama</option>
