@@ -19,11 +19,11 @@ a4 = Actor.create(name:"Kathryn Hahn", age: 48)
 #Movies
 puts "creating Movies"
 
-m1 = Movie.create(name:"Django Unchained", rating:"R", release_date: 2012, genre_id: g1.id )
-m2 = Movie.create(name:"Stepbrothers", rating:"R", release_date: 2008, genre_id: g3.id )
-m3 = Movie.create(name:"Uncut Gems", rating:"R", release_date: 2019, genre_id: g2.id )
-m4 = Movie.create(name:"Happy Gilmore", rating:"PG-13", release_date: 1996,  genre_id: g3.id )
-m5 = Movie.create(name:"Anchorman", rating:"PG-13", release_date: 2004, genre_id: g3.id )
+m1 = Movie.create(movieName:"Django Unchained", rating:"R", release_date: 2012, genre_id: g1.id )
+m2 = Movie.create(movieName:"Stepbrothers", rating:"R", release_date: 2008, genre_id: g3.id )
+m3 = Movie.create(movieName:"Uncut Gems", rating:"R", release_date: 2019, genre_id: g2.id )
+m4 = Movie.create(movieName:"Happy Gilmore", rating:"PG-13", release_date: 1996,  genre_id: g3.id )
+m5 = Movie.create(movieName:"Anchorman", rating:"PG-13", release_date: 2004, genre_id: g3.id )
 
 
 #ROle

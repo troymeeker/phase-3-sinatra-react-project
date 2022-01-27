@@ -45,7 +45,6 @@ const App = () => {
     .then((resp) => resp.json())
     .then((actor) => {
          setActors([...actors, actor])
-        // console.log('actors!');
         
     })
   } 
@@ -61,8 +60,6 @@ const App = () => {
     .then((resp) => resp.json())
     .then((movie) => {
          setMovies([...movies, movie])
-        
-        
     })
 
   }

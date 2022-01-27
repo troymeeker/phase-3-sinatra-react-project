@@ -60,7 +60,7 @@ class ApplicationController < Sinatra::Base
 
     post '/movies' do
       movie = Movie.create(
-        name: params[:name],
+        movieName: params[:movieName],
         rating: params[:rating], 
         release_date: params[:release_date],
         genre_id: params[:genre_id]

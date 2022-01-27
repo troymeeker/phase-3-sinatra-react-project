@@ -18,7 +18,6 @@ const Movies = ({movies, handleMovieSubmit, onMovieDelete }) => {
       <MovieForm handleMovieSubmit={handleMovieSubmit} />
 
       <ul>{movieCards}</ul>
-     
   
     </div>
   );

@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2022_01_21_212051) do
   end
 
   create_table "movies", force: :cascade do |t|
-    t.string "name"
+    t.string "movieName"
     t.string "rating"
     t.integer "release_date"
     t.integer "genre_id"

@@ -3,35 +3,32 @@ import React, { useState } from "react";
 
 const MovieForm = ({handleMovieSubmit}) => {
     
-    const [name, setName] = useState("")
+    const [movieName, setMovieName] = useState("")
     const [rating, setMovieRating] = useState("")
     const [release_date, setReleaseDate] = useState("")
     const [genre_id, setGenreId] = useState("")
-
-    // const [genre, setGenre] = useState("")
     
 
     function handleAddMovie(e){
         e.preventDefault();
         // console.log('actor added');
         const movie = {
-            name: name, 
+            movieName: movieName, 
             rating: rating, 
             release_date: release_date,
             genre_id: genre_id
         };
 
         handleMovieSubmit(movie)
-        setName("")
+        setMovieName("")
         setMovieRating("")
         setReleaseDate("")
         setGenreId("")
-        
-
+    
     }
 
     function handleMovieNameChange(e){
-        setName(e.target.value)
+        setMovieName(e.target.value)
     }
 
     function handleMovieRating(e){
@@ -52,15 +49,15 @@ const MovieForm = ({handleMovieSubmit}) => {
         <h3>Add Movie </h3>
           <div>
              <label>Movie Name:</label>
-             <input type='text' placeholder='Name' onChange={handleMovieNameChange} value={name}/>
+             <input type='text' name='Movie Name' placeholder='Movie Name' onChange={handleMovieNameChange} value={movieName}/>
           </div> 
           <div> 
               <label> Rating: </label>
-              <input type='text' placeholder='Rating' onChange={handleMovieRating} value={rating}/>
+              <input type='text' name='Rating' placeholder='Rating' onChange={handleMovieRating} value={rating}/>
           </div>
           <div> 
               <label> Release Date: </label>
-              <input type='text' placeholder='Release Date' onChange={handleMovieRelease} value={release_date}/>
+              <input type='text' name='Release Date' placeholder='Release Date' onChange={handleMovieRelease} value={release_date}/>
           </div>
           <div> 
               <label>Select Genre: </label>

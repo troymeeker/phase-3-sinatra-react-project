@@ -1,7 +1,8 @@
 import React from "react";
 
 const MovieCard = ({movie, onMovieDelete}) => {
-    const {id, name, rating, release_date, genre} = movie;
+    const {id, movieName, rating, release_date, genre} = movie;
+    
 
 
     function handleDelete(){
@@ -10,10 +11,10 @@ const MovieCard = ({movie, onMovieDelete}) => {
         })
         onMovieDelete(id)
     }
+    
     return (
         <div>
-           
-            <h4> - {name} -</h4>
+            <h4> - {movieName} -</h4>
             <h4> Rating: {rating}</h4>
             <h4> Released in: {release_date}</h4>
             <h4>Genre: {genre.name}</h4>
