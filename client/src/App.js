@@ -91,7 +91,7 @@ const App = () => {
 
         <Route path="/genres" element={<Genres genres={genres} />} />
 
-        <Route path="/movies" element={<Movies movies={movies} handleMovieSubmit={handleMovieSubmit} onMovieDelete={handleMovieDelete}/>}/>
+        <Route path="/movies" element={<Movies movies={movies} handleMovieSubmit={handleMovieSubmit} onMovieDelete={handleMovieDelete} />}/>
 
         <Route path="/actors" element={<Actors actors={actors} handleActorSubmit={handleActorSubmit} onActorDelete={handleActorDelete}/> }/>
 

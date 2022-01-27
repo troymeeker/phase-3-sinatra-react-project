@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 
+
 const MovieForm = ({handleMovieSubmit}) => {
+    
     const [name, setName] = useState("")
     const [rating, setMovieRating] = useState("")
     const [release_date, setReleaseDate] = useState("")
+    const [genre_id, setGenreId] = useState("")
+
+    // const [genre, setGenre] = useState("")
+    
 
     function handleAddMovie(e){
         e.preventDefault();
@@ -12,12 +18,15 @@ const MovieForm = ({handleMovieSubmit}) => {
             name: name, 
             rating: rating, 
             release_date: release_date,
+            genre_id: genre_id
         };
 
         handleMovieSubmit(movie)
         setName("")
         setMovieRating("")
         setReleaseDate("")
+        setGenreId("")
+        
 
     }
 
@@ -31,6 +40,10 @@ const MovieForm = ({handleMovieSubmit}) => {
 
     function handleMovieRelease(e){
         setReleaseDate(e.target.value)
+    }
+    function handleGenreChange(e){
+         setGenreId(e.target.value)
+        //  console.log(e.target.value);
     }
 
     return (
@@ -48,6 +61,16 @@ const MovieForm = ({handleMovieSubmit}) => {
           <div> 
               <label> Release Date: </label>
               <input type='text' placeholder='Release Date' onChange={handleMovieRelease} value={release_date}/>
+          </div>
+          <div> 
+              <label>Select Genre: </label>
+              <select onChange={handleGenreChange} >
+                  <option value='0'>Select</option>
+                  <option value='1'>Action</option>
+                  <option value='2'>Drama</option>
+                  <option value='3'>Comedy</option>
+
+              </select>
           </div>
  
         <button>Add Movie</button>

@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
     
     get '/movies' do
       movies = Movie.all
-      movies.to_json
+      movies.to_json(include: [:genre])
     end
   
     get "/actors" do
