@@ -23,7 +23,7 @@ const MovieForm = ({handleMovieSubmit}) => {
         setMovieName("")
         setMovieRating("")
         setReleaseDate("")
-        setGenreId("")
+        setGenreId("select")
     
     }
 
@@ -63,7 +63,7 @@ const MovieForm = ({handleMovieSubmit}) => {
           <div> 
               <label>Select Genre: </label>
               <select  onChange={handleGenreChange}>
-                  <option value='0'>Select</option>
+                  <option value='select'>Select</option>
                   <option value='1'>Action</option>
                   <option value='2'>Drama</option>
                   <option value='3'>Comedy</option>

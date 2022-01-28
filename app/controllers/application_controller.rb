@@ -65,7 +65,7 @@ class ApplicationController < Sinatra::Base
         release_date: params[:release_date],
         genre_id: params[:genre_id]
       )
-      movie.to_json
+      movie.to_json(include: [:genre])
     end
   
   
