@@ -23,7 +23,7 @@ const MovieForm = ({handleMovieSubmit}) => {
         setMovieName("")
         setMovieRating("")
         setReleaseDate("")
-        setGenreId("select")
+        setGenreId("")
     
     }
 
