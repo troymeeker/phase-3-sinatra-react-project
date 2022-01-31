@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 const MovieForm = ({handleMovieSubmit}) => {
     
     const [movieName, setMovieName] = useState("")
