@@ -9,12 +9,13 @@ const Actors = ({actors, handleActorSubmit, onActorDelete}) => {
     })
   
     return (
-      <div className='centered'>
+      <div className='list-item'>
         <h1 className='border'> Actors </h1>
        
       <ActorForm handleActorSubmit={handleActorSubmit}/>
 
        <ul>
+       <p>_______________________________________________________________</p>
         {actorCards }
        </ul>
          

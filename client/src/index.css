@@ -28,15 +28,19 @@ code {
   border: solid rgb(78, 78, 128) 4px;
   margin: 5px;
   padding: 5px;
-  
 
 }
 .genres{
   text-align: center;
   
   
-  
 }
-.centered{
+.list-item{
   text-align: center;
+  color:inherit;
+  list-style: none;
 }
+
+/* .list-item::after{
+  color: black;
+} */

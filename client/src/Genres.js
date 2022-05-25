@@ -10,7 +10,7 @@ const Genres = ({genres}) => {
   
 
   return (
-    <div  className='centered , genres'>
+    <div  className='list-item , genres'>
       <h1 className='border'> Genres </h1>
      
       <ul>

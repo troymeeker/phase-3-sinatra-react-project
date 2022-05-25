@@ -16,6 +16,8 @@ const ActorCard = ({actor, onActorDelete}) => {
             <h4> Age: {age}  </h4>
 
             <button onClick={handleDelete}>Delete This Actor</button>
+
+            <p>_______________________________________________________________</p>
         </div>
     )
 }

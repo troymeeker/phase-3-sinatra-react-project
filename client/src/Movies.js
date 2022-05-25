@@ -11,11 +11,11 @@ const Movies = ({movies, handleMovieSubmit, onMovieDelete }) => {
   
 
   return (
-    <div className='centered'>
+    <div className='list-item'>
       <h1  className='border'> Movies </h1>
 
      <MovieForm handleMovieSubmit={handleMovieSubmit} />
-
+     <p>_______________________________________________________________</p>
       <ul>{movieCards}</ul>
   
     </div>

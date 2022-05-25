@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
 return (
-    <div className='centered'>
+    <div className='list-item'>
        <h1 className='border' >Home </h1> 
        <p>
            This is our Home Page! Click on Genres, Movies, or Actors to see a list of the respective Genres, Movies or Actors 

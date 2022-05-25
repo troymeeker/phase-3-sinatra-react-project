@@ -79,12 +79,11 @@ const App = () => {
   //   setGenres(updatedGenres);
   // }
   
-
   return (
    <BrowserRouter>
      <Navbar />
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Home/>} />
 
         <Route path="/genres" element={<Genres genres={genres} />} />
 
