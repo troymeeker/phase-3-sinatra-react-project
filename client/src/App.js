@@ -64,6 +64,21 @@ const App = () => {
 
   }
 
+  function handleGenreSubmit(genre){
+    fetch('http://localhost:9292/genres', {
+      method: "POST", 
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(genre)
+    })
+    .then((resp) => resp.json())
+    .then((genre) => {
+       setGenres([...genres, genre])
+    })
+   
+  }
+
   function handleActorDelete(id){
     const updatedActors = actors.filter((actor) => actor.id !== id)
     setActors(updatedActors);
@@ -85,7 +100,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
 
-        <Route path="/genres" element={<Genres genres={genres} handleGenreDelete={handleGenreDelete}/>} />
+        <Route path="/genres" element={<Genres genres={genres} handleGenreSubmit={handleGenreSubmit} handleGenreDelete={handleGenreDelete} />} />
 
         <Route path="/movies" element={<Movies movies={movies} handleMovieSubmit={handleMovieSubmit} onMovieDelete={handleMovieDelete} />}/>
 

@@ -70,7 +70,7 @@ const MovieForm = ({handleMovieSubmit}) => {
               </select>
           </div>
  
-        <button>Add Movie</button>
+        <button className="button">Add Movie</button>
        </form>
       </div> 
     )

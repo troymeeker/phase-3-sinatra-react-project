@@ -31,7 +31,7 @@ const ActorForm = ({handleActorSubmit}) => {
        <form onSubmit={handleAddActor} className='form-border'>
          <h3>Add Actor </h3>
          <div>
-            <label>Actor Name:</label>
+            <label>Actor Name: </label>
             <input type='text' placeholder='Name' onChange={handleNameChange} value={name}/>
          </div> 
          <div> 
@@ -39,7 +39,7 @@ const ActorForm = ({handleActorSubmit}) => {
              <input type='text' placeholder='Age' onChange={handleAgeChange} value={age}/>
          </div>
 
-       <button>Add Actor</button>
+       <button className="button">Add Actor</button>
       </form>
      </div> 
    )

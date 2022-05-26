@@ -42,12 +42,12 @@ class ApplicationController < Sinatra::Base
 
     end
 
-    # delete '/genres/:id' do 
-    #   genre = Genre.find(params[:id])
-    #   genre.destroy
-    #   genre.to_json
+    delete '/genres/:id' do 
+      genre = Genre.find(params[:id])
+      genre.destroy
+      genre.to_json
 
-    # end
+    end
   
     post '/actors' do
       actor = Actor.create(
@@ -66,6 +66,15 @@ class ApplicationController < Sinatra::Base
         genre_id: params[:genre_id]
       )
       movie.to_json(include: [:genre])
+    end
+
+    post '/genres' do
+      genre = Genre.create(
+        name: params[:name]
+        
+        
+      )
+      genre.to_json
     end
   
   
