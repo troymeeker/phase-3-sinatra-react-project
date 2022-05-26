@@ -5,12 +5,12 @@ const Navbar = () => {
   
   return (
     <div >
-      <nav className='navbar'>
-        <ul >
-         <li><Link to ='/' className="navbar-item">Home</Link> </li>
-         <li><Link to='/genres' className="navbar-item">Genres</Link></li>
-         <li><Link to='/movies' className="navbar-item">Movies</Link></li>
-         <li><Link to='/actors' className="navbar-item">Actors</Link></li>
+      <nav >
+        <ul className='navbar'>
+         <li><Link to ='/' className="navbar-item">HOME</Link> </li>
+         <li><Link to='/genres' className="navbar-item">GENRES</Link></li>
+         <li><Link to='/movies' className="navbar-item">MOVIES</Link></li>
+         <li><Link to='/actors' className="navbar-item">ACTORS</Link></li>
           
         </ul>
       </nav>  

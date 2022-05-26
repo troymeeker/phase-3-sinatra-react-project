@@ -12,8 +12,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(189, 184, 184);
  
-  
-  
 }
 
 code {
@@ -22,23 +20,32 @@ code {
     
 }
 .navbar{
-  height: 20vh;
-  background-color: rgb(91, 111, 111);
-  color:white;
   
-}
-.navbar-item{
- 
-  list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  background-color: rgb(135, 131, 121);
+  height: 15vh;
+  font-weight: bold;
+  list-style: none;
+  
+ 
+}
 
+.navbar-item{
+   text-decoration: none;
+   display: flex;
+   align-items:center;
+   justify-content: space-evenly;
+  padding: 12px; 
+  margin:30px;
+  /* color: rgb(255, 255, 255); */
+  border: 1px solid black;
+  border-radius: 10px;
 }
 .navbar-item:focus{
-  color:rgb(200, 200, 200);
+  color:rgb(255, 255, 255);
   background-color: rgb(16, 16, 16);
-  /* width: 100px; */
-  
+   
 
 }
 .border{
@@ -46,7 +53,7 @@ code {
 }
 .form-border{
   border: solid rgb(78, 78, 128) 4px;
-  margin: 5px;
+  margin: 15px;
   padding: 5px;
   border-radius: 10px;
 
@@ -82,9 +89,8 @@ code {
 }
 .list-item{
   text-align: center;
- 
-
 }
+
 .button{
   padding:8px;
   border-radius: 5px;
@@ -103,6 +109,6 @@ code {
   margin-left: 22%;
 }
 
-.list-item:visited{
+/* .list-item:visited{
   color: inherit;
-}
+} */
