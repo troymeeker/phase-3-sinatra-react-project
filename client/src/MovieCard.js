@@ -13,12 +13,12 @@ const MovieCard = ({movie, onMovieDelete}) => {
     }
     
     return (
-        <div>
+        <div className="each-movie">
             <h4> - {movieName} -</h4>
             <h4> Rating: {rating}</h4>
             <h4> Released in: {release_date}</h4>
             <h4> Genre: {genre.name} </h4>
-            <button onClick={handleDelete}>Delete</button>
+            <button onClick={handleDelete} className="button">Delete</button>
             <p>_______________________________________________________________</p>
         </div>
     );

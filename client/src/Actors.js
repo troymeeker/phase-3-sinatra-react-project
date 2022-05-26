@@ -15,7 +15,7 @@ const Actors = ({actors, handleActorSubmit, onActorDelete}) => {
       <ActorForm handleActorSubmit={handleActorSubmit}/>
 
        <ul>
-       <p>_______________________________________________________________</p>
+       
         {actorCards }
        </ul>
          

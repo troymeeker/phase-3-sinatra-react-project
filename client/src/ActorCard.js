@@ -11,13 +11,13 @@ const ActorCard = ({actor, onActorDelete}) => {
     }
    
     return (
-        <div>
-            <h4> |  {name}  | </h4>
-            <h4> Age: {age}  </h4>
+        <div className="each-actor">
+            <h4> |  {name}  | </h4><br/>
+            <h4> Age: {age}  </h4><br/>
 
-            <button onClick={handleDelete}>Delete This Actor</button>
+            <button onClick={handleDelete} className="button">Delete This Actor</button>
 
-            <p>_______________________________________________________________</p>
+          
         </div>
     )
 }

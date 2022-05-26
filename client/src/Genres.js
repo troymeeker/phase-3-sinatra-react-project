@@ -2,10 +2,10 @@ import React from 'react';
 import GenreCard from './GenreCard';
 
 
-const Genres = ({genres}) => {
+const Genres = ({genres, handleGenreDelete}) => {
  
   const genreCards = genres.map((genre) => {
-   return <GenreCard genre={genre} key={genre.id} />
+   return <GenreCard genre={genre} key={genre.id} deleteGenre={handleGenreDelete}/>
   })
   
 

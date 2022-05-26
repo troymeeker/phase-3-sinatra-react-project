@@ -74,10 +74,10 @@ const App = () => {
     setMovies(updatedMovies);
   }
    
-  // function handleGenreDelete(id){
-  //   const updatedGenres = genres.filter((genre) => genre.id !== id)
-  //   setGenres(updatedGenres);
-  // }
+  function handleGenreDelete(id){
+    const updatedGenres = genres.filter((genre) => genre.id !== id)
+    setGenres(updatedGenres);
+  }
   
   return (
    <BrowserRouter>
@@ -85,7 +85,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
 
-        <Route path="/genres" element={<Genres genres={genres} />} />
+        <Route path="/genres" element={<Genres genres={genres} handleGenreDelete={handleGenreDelete}/>} />
 
         <Route path="/movies" element={<Movies movies={movies} handleMovieSubmit={handleMovieSubmit} onMovieDelete={handleMovieDelete} />}/>
 
